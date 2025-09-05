@@ -1,12 +1,14 @@
-torch>=1.13.0
+# 原有
+torch
 torchvision
 numpy
 opencv-python
 scipy
-scikit-learn
 pyyaml
-tqdm
-matplotlib
 mmpose>=1.0.0
 mmdet>=3.0.0
 mmengine
+
+# ✅ 新增（支持多人跟踪）
+mmtrack>=1.0.0
+flask  # 可选：Web API
