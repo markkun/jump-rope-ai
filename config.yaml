@@ -10,6 +10,19 @@ model:
   num_classes: 2
   max_frames: 300
   input_channels: 3
+  scoring_ckpt: "models/scoring_net.pth"
+  use_scoring: true
+
+pipeline:
+  max_tracks: 10
+  device: "cuda"  # or "cpu"
+  min_action_confidence: 0.85
+
+pose_extractor:
+  det_config: "yolox_l_8x8_300e_coco.py"
+  det_ckpt: "yolox_l_8x8_300e_coco_20211126_140254-ee22ba79.pth"
+  pose_config: "rtmpose-s_8xb256-420e_coco-256x192.py"
+  pose_ckpt: "rtmpose-s_simcc-coco_pt-aic-coco_120e-256x192-f1d8ece0_20230126.pth"
 
 train:
   batch_size: 8
