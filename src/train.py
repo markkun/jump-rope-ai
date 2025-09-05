@@ -7,7 +7,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 import yaml
 
-cfg = yaml.safe_load(open('config.yaml'))
+cfg = yaml.safe_load(open('../config.yaml'))
 
 dataset = JumpRopeDataset()
 loader = DataLoader(dataset, batch_size=cfg['train']['batch_size'], shuffle=True)
