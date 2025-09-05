@@ -51,6 +51,8 @@ jump-rope-ai/
 │   ├── pipeline.py                    # 端到端推理流水线
 │   └── ...
 ├── app/                     # 应用层
+│   ├── infer.py               # ✅ 带日志、异常处理、性能监控
+│   ├── end2end_stream.py      # ✅ RTMP 推流
 │   ├── real_time.py         # 实时摄像头分析
 │   └── web_api.py           # Flask API 服务
 ├── scripts/                 # 工具脚本
