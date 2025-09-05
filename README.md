@@ -77,7 +77,7 @@ jump-rope-ai/
 # 生成训练数据（需准备视频和标签）
 python scripts/generate_scoring_data.py
 
-# 训练评分模型（示例）
+# 训练模型（示例）
 python scripts/train.py \
     --task action \
     --data-path data/action/data.npy \
