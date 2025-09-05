@@ -42,7 +42,7 @@ wget -O models/stgcn_best.pth https://example.com/stgcn_jump.pth
 python app/real_time.py
 ```
 ## 📂 项目结构
-
+```
 jump-rope-ai/
 ├── src/                     # 核心模块
 │   ├── optimized_pose_extractor.py    # 多人姿态提取
@@ -67,6 +67,8 @@ jump-rope-ai/
 ├── requirements.txt         # 依赖
 ├── Dockerfile               # 容器化
 └── README.md
+```
+
 ## 🛠️ 功能使用
 ### 1. 训练评分模型
 ```bash
