@@ -1,4 +1,5 @@
 # src/train.py
+import os
 from src.dataset import JumpRopeDataset
 from src.stgcn_model import STGCN
 import torch
