@@ -115,7 +115,9 @@ npm start
 本项目基于 MIT License 开源。
 
 ## 💌 鸣谢
+```
 MMPose
 MMDetection
 MMEngine
 PyTorch
+```
