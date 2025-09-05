@@ -15,7 +15,7 @@ model:
 
 pipeline:
   max_tracks: 10
-  device: "cuda"  # or "cpu"
+  device: "cuda"
   min_action_confidence: 0.85
 
 pose_extractor:
@@ -28,11 +28,11 @@ train:
   batch_size: 8
   epochs: 50
   lr: 0.001
-  device: "cuda" if cuda else "cpu"
+  device: "cuda"
 
 inference:
   fps: 30
-  min_interval: 0.4  # 最小跳跃间隔（秒）
+  min_interval: 0.4
   video_path: "data/videos/test_jump.mp4"
 
 rtmpose:
