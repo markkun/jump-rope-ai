@@ -78,7 +78,12 @@ jump-rope-ai/
 python scripts/generate_scoring_data.py
 
 # 训练评分模型（示例）
-python scripts/train_scoring.py
+python scripts/train.py \
+    --task action \
+    --data-path data/action/data.npy \
+    --labels-path data/action/labels.npy \
+    --epochs 50 \
+    --lr 1e-3
 ```
 
 ### 2. 导出 ONNX 模型
