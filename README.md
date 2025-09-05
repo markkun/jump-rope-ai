@@ -84,11 +84,12 @@ python scripts/train_scoring.py
 ```bash
 python scripts/export_onnx_full.py
 ```
+```
 输出：
-
 models/stgcn.onnx
 models/scoring_net.onnx
 models/rtmpose.onnx（需使用 mim export）
+```
 
 ### 3. 启动 Web API Bash 深色版本  
 ```bash
