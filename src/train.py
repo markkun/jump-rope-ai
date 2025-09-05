@@ -3,6 +3,7 @@ import os
 from src.dataset import JumpRopeDataset
 from src.stgcn_model import STGCN
 import torch
+import torch.nn as nn
 from torch.utils.data import DataLoader
 import yaml
 
