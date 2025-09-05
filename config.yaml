@@ -1,0 +1,27 @@
+# config.yaml
+data:
+  video_dir: "data/videos"
+  pose_dir: "data/pose_npy"
+  label_map:
+    jumping: 0
+    non_jump: 1
+
+model:
+  num_classes: 2
+  max_frames: 300
+  input_channels: 3
+
+train:
+  batch_size: 8
+  epochs: 50
+  lr: 0.001
+  device: "cuda" if cuda else "cpu"
+
+inference:
+  fps: 30
+  min_interval: 0.4  # 最小跳跃间隔（秒）
+  video_path: "data/videos/test_jump.mp4"
+
+rtmpose:
+  config: "rtmpose-s_8xb256-420e_coco-256x192.py"
+  checkpoint: "rtmpose-s_simcc-coco_pt-aic-coco_120e-256x192-f1d8ece0_20230126.pth"
