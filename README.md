@@ -84,19 +84,42 @@ python scripts/train_scoring.py
 ```bash
 python scripts/export_onnx_full.py
 ```
-```
 输出：
+```
+
 models/stgcn.onnx
 models/scoring_net.onnx
 models/rtmpose.onnx（需使用 mim export）
 ```
 
-### 3. 启动 Web API Bash 深色版本  
+### 3. 带日志的本地推理
+```bash
+# 安装日志目录
+mkdir logs
+
+# 运行（自动记录日志）
+python app/infer.py --source 0 --output output.mp4 --log-fps --show
+```
+
+### 4. RTMP 推流（需安装 FFmpeg）
+```bash
+# 安装 FFmpeg
+sudo apt install ffmpeg  # Ubuntu
+# 或 brew install ffmpeg # macOS
+
+# 推流到本地 Nginx 或 OBS
+python app/end2end_stream.py \
+    --source 0 \
+    --rtmp-addr rtmp://localhost/live/jump \
+    --fps 25
+```
+
+### 5. 启动 Web API Bash 深色版本  
 ```bash
 python app/web_api.py  访问 http://localhost:5000 查看文档。
 ```
 
-### 4. 运行前端界面 Bash 深色版本  
+### 6. 运行前端界面 Bash 深色版本  
 ```bash
 cd frontend
 npm install
