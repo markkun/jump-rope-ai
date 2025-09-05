@@ -86,7 +86,6 @@ python scripts/export_onnx_full.py
 ```
 输出：
 ```
-
 models/stgcn.onnx
 models/scoring_net.onnx
 models/rtmpose.onnx（需使用 mim export）
