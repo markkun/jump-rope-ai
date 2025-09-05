@@ -1,0 +1,12 @@
+torch>=1.13.0
+torchvision
+numpy
+opencv-python
+scipy
+scikit-learn
+pyyaml
+tqdm
+matplotlib
+mmpose>=1.0.0
+mmdet>=3.0.0
+mmengine
